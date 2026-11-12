@@ -21,6 +21,7 @@ The answers come from OneTag AI, not from OpenAI or ChatGPT. This project is not
 ```js
 const history = [];
 const text = await onetag.ask(prompt, null, {
+  system: "You are a helpful assistant. Reply in plain text, no Markdown.",
   history,                                        // earlier turns, so follow-ups work
   stream: (delta) => (answer.textContent += delta), // show the answer as it is written
 });

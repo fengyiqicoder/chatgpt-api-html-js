@@ -27,6 +27,7 @@
       answer.textContent = "";
 
       const text = await onetag.ask(prompt, null, {
+        system: "You are a helpful assistant. Reply in plain text, no Markdown.",
         history,
         stream: (delta) => (answer.textContent += delta),
       });
